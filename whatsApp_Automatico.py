@@ -1,26 +1,21 @@
-
-#Debe Instalar la libreria 
-# pip install pyautogui
-
+# Install library pyautogui
 import pyautogui as pg
 import time as tm
 import webbrowser as web
 
-# Aqui Deben Reemplazar NUMERO Por El Numero Al Cual Desean Enviar El Mensaje
-#Ejemplo
-#web.open("https://web.whatsapp.com/send?phone=+56912312312")
+whatsapp_number = 1111111
+message = "Example Message"
 
-web.open("https://web.whatsapp.com/send?phone=+NUMERO")
-tm.sleep(8) #Tiempo De Espera Para Ejecutar Mensajes,
-            #Por La Demora De La Carga De Pagina
-pg.write("Prueba De Mensajes Numero 1") #Mensaje 
-pg.press('enter') #Boton Apretado Automatico
+web.open(f"https://web.whatsapp.com/send?phone=+{whatsapp_number}")
+tm.sleep(8) #Delay for messages
+pg.write(f"{message} 1") # Your message
+pg.press('enter') #Send
 
 for i in range(1):
-    pg.write("Mensaje Numero 1 \n")
-    pg.write("Mensaje Numero 2 \n")
-    pg.write("Mensaje Numero 3")
+    pg.write(f"{message} 1 \n")
+    pg.write(f"{message} 2 \n")
+    pg.write(f"{message} 3")
     pg.press('enter')
     
-    print("Mensajes " +str(i+1)) #Contador De Mensajes
+    print("Mensajes " +str(i+1)) #Bucle for
 pass
