@@ -4,7 +4,7 @@ import time as tm
 import webbrowser as web
 
 index = 0
-whatsapp_number = 56953955540
+whatsapp_number = 11111111111
 messages = ["Message", "Message", "Message", "Message"]
 
 web.open(f"https://web.whatsapp.com/send?phone=+{whatsapp_number}")
